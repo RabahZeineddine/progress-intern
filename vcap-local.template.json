@@ -1,0 +1,29 @@
+{
+  "services": {
+    "cloudantNoSQLDB": [
+      {
+        "name": "progress-intern",
+        "label": "cloudantNoSQLDB",
+        "plan": "Lite",
+        "credentials": {
+            "username": "",
+            "password": "",
+            "host": "",
+            "port": 443,
+            "url": ""
+            }
+      }
+    ],
+    "conversation": [
+      {
+        "label": "conversation",
+        "name": "progress-intern-conversation",
+        "credentials": {
+            "url": "https://gateway.watsonplatform.net/conversation/api",
+            "password": "",
+            "username": ""
+        }
+      }
+    ]
+  }
+}
