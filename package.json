@@ -10,7 +10,8 @@
     "ejs": "2.4.x",
     "cloudant": "1.4.x",
     "body-parser": "1.14.x",
-    "method-override": "2.3.x"
+    "method-override": "2.3.x",
+      "express-session":"latest"
   },
   "repository": {},
   "engines": {

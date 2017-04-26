@@ -7,6 +7,7 @@ var express = require('express'),
     http = require('http'),
     path = require('path');
 
+var session = require('express-session');
 var app = express();
 
 var db;
@@ -109,12 +110,46 @@ app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/style', express.static(path.join(__dirname, '/views/style')));
 
+app.use(session({
+    secret: 'ssshhhhh'
+})); // Creates session
+
+
+
+
+function initCloudantDocuments(){
+    
+}
+
+
+
+
 
 
 app.get('/', routes.index);
-app.get('/register-admin',routes.registerAdmin);
+app.get('/signup-admin',routes.signupAdmin);
+
+app.get('/SignupError',routes.signupAdmin)
+
 
 app.post('/createAdminAccount',function(req,res){
+    
+    var firstname = req.body.firstName;
+    var lastname = req.body.lastName;
+    var email = req.body.email;
+    var password = req.body.password;
+    var confirmaPassword = req.body.confirmPassword;
+    
+    if(password.localeCompare(confirmaPassword) == 0){
+        //Password match
+        
+        
+    }else{
+        //Return with error
+        req.session.errorMsg = "Passwords don't match!";
+        res.redirect('/SignupError');
+        
+    }
     
 });
 
