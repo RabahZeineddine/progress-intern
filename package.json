@@ -11,7 +11,8 @@
     "cloudant": "1.4.x",
     "body-parser": "1.14.x",
     "method-override": "2.3.x",
-      "express-session":"latest"
+      "express-session":"latest",
+      "password-hash":"latest"
   },
   "repository": {},
   "engines": {

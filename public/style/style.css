@@ -103,7 +103,7 @@
      border-color: #ccc;
  }
  
- .btn-login  {
+ .btn-login {
      background-color: #81d8d0;
      outline: none;
      color: #fff;
@@ -131,4 +131,32 @@
  .forgot-password:focus {
      text-decoration: underline;
      color: #666;
+ }
+ 
+ .loading-progress {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .loading-progress .step {
+     border: 1px solid #81d8d0;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .loading-progress .filled {
+     background-color: #81d8d0;
+     color: #fff;
+ }
+ 
+ .loading-progress .line {
+     width: 100px;
+     height: 1px;
+     border: 1px solid #81d8d0;
  }
